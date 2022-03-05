@@ -1,8 +1,8 @@
 import telebot
 import config
-from telebot import types
+from telebot.types import ReplyKeyboardMarkup
 import random
-from telebot import REPLY_MARKUP_TYPES
+import  types
 
 # Создаем экземпляр бота
 bot = telebot.TeleBot(config.TOKEN)
@@ -12,7 +12,7 @@ responsible_list = ['Аня', 'Лена', 'Никита', 'Мурат', 'Дим�
 # Функция, обрабатывающая команду /start
 @bot.message_handler(commands=["start"])
 def start(message, res=False):
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+    markup = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
     item1 = types.KeyboardButton("Назначить ответственных")
     markup.add(item1)
     bot.send_message(message.chat.id, 'Добро пожаловать, я бот "Охотник 1.0". Создан для определения ответственных лиц',
