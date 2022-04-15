@@ -6,7 +6,7 @@ import  types
 
 # Создаем экземпляр бота
 bot = telebot.TeleBot(config.TOKEN)
-responsible_list = ['Аня', 'Лена', 'Никита', 'Мурат', 'Дима', 'Володя']
+responsible_list = ['Аня','Никита', 'Мурат', 'Дима', 'Володя']
 
 
 # Функция, обрабатывающая команду /start
